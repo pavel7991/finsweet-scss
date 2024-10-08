@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+$header-height: 5rem;
+
+$font-size: 16px;
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: 'Sen', sans-serif;
+
+$gap: 20px;
+$gap-sm: math.div($gap, 2); // 10px
+$gap-lg: $gap * 1.5; // 30px
+$gap-x2: $gap * 2; // 40px
+$gap-x3: $gap * 3; // 60px
+$gap-x4: $gap * 4; // 80px
+$gap-x5: $gap * 5; // 100px
+
+// $font-family-primary: 'Sen', sans-serif;
+// $font-family-secondary: 'Inter', sans-serif;

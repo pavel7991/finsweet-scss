@@ -1,0 +1,381 @@
+@use 'base' as *;
+@use 'components' as *;
+
+@use 'variables' as *;
+
+section {
+  margin-bottom: 8rem;
+}
+/* -------------------------------------- */
+/* ------------- typography ------------- */
+/* -------------------------------------- */
+
+.flex-col-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  background-color: $color-black;
+  padding: 3.5rem 0;
+}
+.form-subcribe {
+  display: flex;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4rem 5rem;
+  margin: 3.5rem 0 3rem;
+}
+.form-subcribe-label {
+  min-width: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  flex: 0 1 auto;
+  letter-spacing: -0.125rem;
+}
+.form-subcribe-input {
+  margin-left: auto;
+  background-color: transparent;
+  border: 1px solid var(--color-dark-grey);
+  width: 20rem;
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  color: $color-black;
+  outline: none;
+  color: #fff;
+  flex: 0 0 auto;
+}
+.form-subcribe-input:focus {
+  border: 1px solid #fff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copyright p {
+  color: rgba(255, 255, 255, 0.06);
+}
+.social-nav ul {
+  display: flex;
+  gap: 1.75rem;
+}
+.social-nav ul li a {
+  display: block;
+  color: $color-medium-grey;
+  font-size: 1rem;
+  transition: all, 0.3s ease-out;
+  transform: scale(1);
+}
+.footer .social-nav ul li a:hover {
+  color: #fff;
+  transform: scale(1.6);
+}
+
+/* -------------------------------------- */
+/* ---------   posts-preview   ---------- */
+/* -------------------------------------- */
+
+.posts-preview .title-row {
+  margin-bottom: 2rem;
+}
+.link-view-all {
+  margin-bottom: $color-purple;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.link-view-all:hover {
+  text-decoration: underline;
+}
+.posts-preview-grid {
+  display: grid;
+  grid-template-columns: 57% 1fr;
+  grid-column-gap: 2rem;
+}
+
+.grid-featured {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* -------------------------------------- */
+/* -----------   posts-lg   ------------- */
+/* -------------------------------------- */
+
+.post-lg {
+  display: grid;
+  grid-template-rows: minmax(12rem, 1fr) auto;
+  padding: 2rem;
+  border: 1px solid rgba(109, 110, 118, 0.1);
+}
+.post-lg-img {
+  display: block;
+  position: relative;
+  background-color: rgba(109, 110, 118, 0.1);
+  overflow: hidden;
+}
+.post-lg-img img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  transform: translate(0, -50%);
+}
+.post-lg-img::before {
+  content: '\f03e';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: $color-medium-grey;
+  font-size: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.post-lg .post-author {
+  margin: 2rem 0 1rem;
+}
+.post-lg .post-title {
+  line-height: 2.5rem;
+  max-height: calc(2.5rem * 2);
+}
+.post-lg .post-description {
+  margin: 1rem 0 2rem;
+  max-height: 3.5rem;
+}
+/* -------------------------------------- */
+/* -----------   posts-sm   ------------- */
+/* -------------------------------------- */
+.post-item-sm {
+  padding: 2rem 2rem 1.5rem 2rem;
+  background-color: #fff;
+  transition: background-color, 0.3s ease-out;
+}
+.post-item-sm:hover {
+  background-color: $color-light-yellow;
+}
+.post-item-sm .post-author {
+  margin-bottom: 0.5rem;
+}
+.post-item-sm h4 a {
+  padding-right: 5rem;
+}
+
+/* -------------------------------------- */
+/* --------   yel-purpl-border   -------- */
+/* -------------------------------------- */
+
+.about-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5.125rem;
+  background-color: var(--color-lavender);
+  padding: 6rem 5rem;
+}
+.about-mission-grid .caption {
+  margin-bottom: 1.5rem;
+}
+.about-mission-grid h2,
+.about-mission-grid h3 {
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+}
+.about-mission-read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: $color-purple;
+  transition: all, 0.3s ease-out;
+}
+.about-mission-read-more:hover {
+  color: $color-dark-yellow;
+  font-weight: 500;
+}
+
+/* -------------------------------------- */
+/* --------   choose-category   --------- */
+/* -------------------------------------- */
+.section-title-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.choose-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+}
+
+.choose-category-item {
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid $color-medium-grey;
+  transition: all, 0.3s ease-out;
+}
+.choose-category-item:hover {
+  background-color: $color-yellow;
+  border: 1px solid $color-yellow;
+}
+.choose-category-item {
+  border: 1px solid $color-medium-grey;
+  padding: 2rem;
+}
+.choose-category-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+.choose-category-item-icon {
+  display: block;
+  background-color: $color-light-yellow;
+  margin-bottom: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------- */
+/* --------   choose-category   --------- */
+/* -------------------------------------- */
+
+.left-img-banner > div {
+  display: flex;
+  position: relative;
+}
+.left-img-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  overflow: hidden;
+  z-index: -1;
+}
+.left-img-banner-bg img {
+  min-width: 100%;
+  height: 100%;
+}
+.left-img-banner-info {
+  background: #fff;
+  padding: 6.25%;
+  margin-top: 9.4%;
+  width: 55%;
+  margin-left: auto;
+}
+.left-img-banner-info .h1 {
+  margin: 1.5rem 0 1rem;
+}
+.left-img-banner-info .btn {
+  margin-top: 2rem;
+}
+
+/* -------------------------------------- */
+/* ----------   list-authors   ---------- */
+/* -------------------------------------- */
+.list-authors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+}
+.list-authors-item {
+  padding: 2.5rem;
+  background-color: $color-light-grey;
+  transition: background-color, 0.3s ease-out;
+  text-align: center;
+}
+.list-authors-item:hover {
+  background-color: $color-light-yellow;
+}
+.list-authors-logo {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0 auto 1.25rem;
+  position: relative;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-out;
+}
+.list-authors-logo:hover {
+  border: 1px solid $color-yellow;
+}
+.list-authors-logo:empty::before {
+  content: '\f030';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color-black;
+  font-size: 3rem;
+}
+.list-authors-logo img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  min-height: 100%;
+}
+.list-authors-name {
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.063rem;
+  font-weight: 700;
+  color: $color-black;
+}
+.list-authors-name:hover {
+  text-decoration: underline;
+}
+.list-authors-company {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: $color-medium-grey;
+  margin-bottom: 1.25rem;
+}
+.list-authors-company::before {
+  content: 'Content Writer ';
+}
+.list-authors-company a {
+  color: inherit;
+}
+.list-authors-company a:hover {
+  color: $color-purple;
+  text-decoration: underline;
+}
+.list-authors-item .social-nav ul {
+  justify-content: center;
+  gap: 1rem;
+}
+.list-authors-item .social-nav ul li a {
+  color: $color-black;
+}
+.list-authors-item .social-nav ul li a:hover {
+  color: $color-yellow;
+}
+
+/* -------------------------------------- */
+/* ----------  join-our-team   ---------- */
+/* -------------------------------------- */
+.join-our-team {
+  width: min(100%, 414px);
+  margin-inline: auto;
+  text-align: center;
+}
+.join-our-team p {
+  color: $color-medium-grey;
+  margin: 1rem 0 2rem;
+}

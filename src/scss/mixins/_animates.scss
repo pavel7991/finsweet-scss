@@ -1,0 +1,30 @@
+@mixin link-line-bottom($color: #000, $hover-color: red, $bottom: 0, $height-line: 1px, $delay: 0.3s) {
+  color: $color;
+  transition: color, $delay ease-out;
+
+  &:hover {
+    color: $hover-color;
+
+    & span::before {
+      background-color: $hover-color;
+      width: 100%;
+    }
+  }
+
+  & span {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: $bottom;
+      height: $height-line;
+      width: 0;
+      transition: background-color, width, $delay ease-out;
+      background-color: $color;
+    }
+  }
+}

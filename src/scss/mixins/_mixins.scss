@@ -1,0 +1,52 @@
+@use '../variables' as *;
+
+@mixin font($fs, $lh, $fw: 400, $ls: 0, $ff: $font-family-secondary) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  letter-spacing: $ls;
+  font-family: $font-family-secondary;
+}
+
+@mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  display: block;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin cropp-text($line: 3, $fs: 1rem, $lh: 1.75rem) {
+  font-size: $fs;
+  line-height: $lh;
+  max-height: $lh * $line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+}
+
+@mixin two-lines($flex-position, $wd-first-line, $wd-second-line, $height-lines: 1.5rem) {
+  display: flex;
+
+  justify-content: $flex-position;
+  .yellow-bg,
+  .purple-bg {
+    height: $height-lines;
+  }
+  .yellow-bg {
+    background-color: $color-yellow;
+    width: $wd-first-line;
+  }
+  .purple-bg {
+    background-color: $color-purple;
+    width: $wd-second-line;
+  }
+}
+
+@mixin auto-grid($min-width: 250px, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}

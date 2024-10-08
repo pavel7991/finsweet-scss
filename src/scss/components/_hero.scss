@@ -1,0 +1,64 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    @include abs-position;
+    z-index: 2;
+    background: radial-gradient(30.56% 76.04% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  }
+
+  &-wrapper {
+    @include abs-position;
+    z-index: 1;
+
+    &__img {
+      @include abs-position(50%, 50%, 50%, 50%);
+      width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-post {
+    position: relative;
+    min-height: calc(100vh - $header-height);
+    padding: 10% 0;
+    width: 62%;
+    z-index: 3;
+
+    &__caption {
+      color: $color-white;
+      @extend %text-caption;
+    }
+    &__title {
+      color: $color-white;
+      margin-top: 24px;
+      margin-bottom: 25px;
+    }
+    &__creator-date {
+      @extend %creator-date;
+      color: $color-white;
+      font-size: 1rem; //16px
+      line-height: 1.75rem; //28px
+      font-weight: 400;
+      a {
+        color: $color-yellow;
+      }
+    }
+    &__description {
+      margin-top: 16px;
+      margin-bottom: 48px;
+      color: $color-white;
+      @include cropp-text;
+    }
+    &__btn {
+      @extend %btn-secondary;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../variables' as *;
+
+%text-sm {
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem; // 20px
+}
+%text-base {
+  font-size: 1rem; //16px
+  line-height: 1.75rem; //28px
+  font-weight: 400;
+}
+
+%text-caption {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: 0.188rem;
+  text-transform: uppercase;
+
+  strong {
+    font-weight: 900;
+  }
+}
+
+%creator-date {
+  @extend %text-sm;
+  color: $color-dark-grey;
+  font-weight: 500;
+
+  &::before {
+    content: 'By';
+    margin-right: 2px;
+  }
+  a {
+    color: $color-purple;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  time {
+    border-left: 2px solid #ffffff;
+    margin-left: 7px;
+    padding-left: 11px;
+  }
+}
