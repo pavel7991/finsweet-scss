@@ -1,0 +1,18 @@
+@use '../../variables' as *;
+@use '../../templates' as *;
+@use '../../mixins' as *;
+
+.footer-bottom {
+  @include flex-between-center;
+
+  &__copyright {
+    p {
+      color: $color-white;
+      opacity: 0.7;
+    }
+  }
+
+  &__social-nav {
+    @extend %social-nav;
+  }
+}

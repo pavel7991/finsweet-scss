@@ -1,0 +1,17 @@
+@use '../variables' as *;
+@use '../templates' as *;
+
+.text-banner {
+  text-align: center;
+  .container {
+    width: min(100%, 414px);
+  }
+
+  &__description {
+    color: $color-medium-grey;
+    margin: 1rem 0 2rem;
+  }
+  &__btn {
+    @extend %btn-primary;
+  }
+}

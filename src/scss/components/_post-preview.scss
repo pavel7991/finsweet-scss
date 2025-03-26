@@ -1,0 +1,105 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+
+.posts-preview {
+  &__grid {
+    display: grid;
+    grid-template-columns: 57% 1fr;
+    gap: 2rem;
+  }
+
+  &__title-row {
+    margin-bottom: 2rem;
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__view-all {
+    color: $color-purple;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.posts-preview__featured {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.post {
+
+  &__image {
+    display: block;
+    position: relative;
+    background-color: rgba(109, 110, 118, 0.1);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__author-name {
+    font-weight: 700;
+    color: $color-purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--large {
+    display: grid;
+    grid-template-rows: minmax(12rem, 1fr) auto;
+    padding: 2rem;
+    border: 1px solid rgba(109, 110, 118, 0.1);
+
+    .post__author {
+      margin: 2rem 0 1rem;
+    }
+    .post__title {
+        @include cropp-text(2, 1.75rem, 2.25rem);
+    }
+    .post__description {
+      @include cropp-text(2);
+      margin: 1rem 0 2rem;
+    }
+    .post__btn {
+        @extend %btn-secondary;
+    }
+  }
+
+  &--small {
+    padding: 2rem 2rem 1.5rem;
+    background-color: #fff;
+    transition: background-color 0.3s ease-out;
+
+    &:hover {
+      background-color: $color-light-yellow;
+    }
+  }
+  .post__title {
+    @include cropp-text(3, 1.75rem, 2.25rem);
+  }
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

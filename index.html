@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
   <title>FinSweet</title>
 </head>
 
@@ -38,7 +38,6 @@
   </header>
 
   <div class="page-wrapper">
-
     <main>
 
       <section class="hero">
@@ -64,130 +63,125 @@
       </section> <!-- hero END -->
 
 
-
       <section class="posts-preview">
         <div class="container">
-          <div class="posts-preview-grid">
+          <div class="posts-preview__grid">
 
-            <div class="grid-featured">
-              <div class="title-row">
-                <h2>Featured Post</h2>
+            <div class="posts-preview__featured">
+              <div class="posts-preview__title-row">
+                <h2 class="posts-preview__title">Featured Post</h2>
               </div>
 
-              <div class="post-lg">
-                <a href="#" class="post-lg-img"><img src="assets/images/post-lg.png" alt="#"></a>
-                <p class="post-author">
-                  <a href="#" class="name">John Deo</a>
-                  <span class="data-create">Aug 23, 2022 </span>
+              <div class="post post--large">
+                <a href="#" class="post__image">
+                  <img src="assets/images/post-lg.png" alt="#">
+                </a>
+                <p class="post__author">
+                  <a href="#" class="post__author-name">John Deo</a>
+                  <span class="post__date">Aug 23, 2022</span>
                 </p>
-                <h3 class="post-title">
-                  <a href="#" class="text-cropp cropp--2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                <h3 class="post__title">
+                  <a href="#" class="post__link">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sedgdo eiusmod tempor.</a>
                 </h3>
-                <p class="post-description text-cropp cropp--2">Duis aute irure dolor in reprehenderit in voluptate
+                <p class="post__description">Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
                   Excepteur sint occaecat cupidatat non proident.</p>
-                <div><a href="#" class="btn btn--arrow">Read More</a></div>
+                <div><a href="#" class="post__btn">Read More</a></div>
               </div>
             </div>
 
-            <div class="posts-preview-all">
-              <div class="title-row flex-col-2">
-                <h2>All Posts</h2>
-                <a href="#" class="link-view-all">View All</a>
+            <div class="posts-preview__all">
+              <div class="posts-preview__title-row posts-preview__title-row--flex">
+                <h2 class="posts-preview__title">All Posts</h2>
+                <a href="#" class="posts-preview__view-all">View All</a>
               </div>
 
-              <div class="posts-sm">
-                <div class="post-item-sm">
-                  <p class="post-author">
-                    <a href="#" class="name">John Deo</a>
-                    <span class="data-create">Aug 23, 2022</span>
+              <div class="posts-list">
+                <div class="post post--small">
+                  <p class="post__author">
+                    <a href="#" class="post__author-name">John Deo</a>
+                    <span class="post__date">Aug 23, 2022</span>
                   </p>
-                  <h4 class="post-title">
-                    <a href="#" class="text-cropp cropp--3">8 Figma design systems that you can download for free
-                      today.</a>
+                  <h4 class="post__title">
+                    <a href="#" class="post__link">8 Figma design systems...</a>
                   </h4>
                 </div>
 
-                <div class="post-item-sm">
-                  <p class="post-author">
-                    <a href="#" class="name">John Deo</a>
-                    <span class="data-create">Aug 23, 2022</span>
+                <div class="post post--small">
+                  <p class="post__author">
+                    <a href="#" class="post__author-name">John Deo</a>
+                    <span class="post__date">Aug 23, 2022</span>
                   </p>
-                  <h4 class="post-title">
-                    <a href="#" class="text-cropp cropp--3">8 Figma design systems that you can download for free
-                      today. 8 Figma design systems that you can download for free
-                      today.</a>
+                  <h4 class="post__title">
+                    <a href="#" class="post__link">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedgdo eiusmod tempor.Lorem ipsum dolor site</a>
                   </h4>
                 </div>
 
-                <div class="post-item-sm">
-                  <p class="post-author">
-                    <a href="#" class="name">John Deo</a>
-                    <span class="data-create">Aug 23, 2022</span>
+                <div class="post post--small">
+                  <p class="post__author">
+                    <a href="#" class="post__author-name">John Deo</a>
+                    <span class="post__date">Aug 23, 2022</span>
                   </p>
-                  <h4 class="post-title">
-                    <a href="#" class="text-cropp cropp--3">8 Figma design systems
-                      today.</a>
+                  <h4 class="post__title">
+                    <a href="#" class="post__link">8 Figma design systems today.</a>
                   </h4>
                 </div>
 
-                <div class="post-item-sm">
-                  <p class="post-author">
-                    <a href="#" class="name">John Deo</a>
-                    <span class="data-create">Aug 23, 2022</span>
+                <div class="post post--small">
+                  <p class="post__author">
+                    <a href="#" class="post__author-name">John Deo</a>
+                    <span class="post__date">Aug 23, 2022</span>
                   </p>
-                  <h4 class="post-title">
-                    <a href="#" class="text-cropp cropp--3">8 Figma design systems
-                      today. Figma design systems that you can download for free
-                      today. Figma design systems that you can download for free
-                      today.</a>
+                  <h4 class="post__title">
+                    <a href="#" class="post__link">Figma design systems that you can downloadFigma design systems that you can download Figma design systems that you can download</a>
                   </h4>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-      </section> <!-- posts-preview -->
+      </section>
 
-      <section class="about-mission">
+      <section class="our-company">
         <div class="container">
-          <div class="about-mission__two-lines">
+          <div class="our-company__two-lines">
             <div class="yellow-bg"></div>
             <div class="purple-bg"></div>
           </div>
 
-
-
-          <div class="about-mission__grid">
-            <div>
-              <p class="caption">ABOUT US</p>
-              <h2>We are a community of content writers who share their learnings</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          <div class="our-company__grid">
+            <div class="our-company-item">
+              <p class="our-company-item__caption caption">ABOUT US</p>
+              <h2 class="our-company-item__title">We are a community of content writers who share their learnings</h2>
+              <p class="our-company-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut
                 labore et
                 dolore magna aliqua.
               </p>
-              <a href="#" class="about-mission-read-more">Read More ></a>
+              <a href="#" class="our-company-item__link">Read More ></a>
             </div>
-            <div>
-              <p class="caption">Our mision</p>
-              <h3>Creating valuable content for creatives all around the world</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+
+            <div class="our-company-item">
+              <p class="our-company-item__caption caption">Our mision</p>
+              <h3 class="our-company-item__title">Creating valuable content for creatives all around the world</h3>
+              <p class="our-company-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.
               </p>
             </div>
           </div>
         </div>
-      </section> <!-- about-mission -->
+      </section> <!-- our-company END -->
 
       <section class="choose-category">
         <div class="container">
-          <h2 class="section-title-center">Choose A Catagory</h2>
+          <h2 class="choose-category__title">Choose A Category</h2>
+
           <div class="choose-category-grid">
             <a href="#" class="choose-category-item">
-              <span class="choose-category-item-icon">
+              <span class="choose-category-item__icon">
                 <span><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M13.0305 1.91397L2.04 0.244474C1.53 0.164974 1.0095 0.304475 0.6195 0.634475C0.2295 0.974975 0 1.46397 0 1.97397V23.0445C0 23.595 0.45 24.045 1.0005 24.045H4.251V18.795C4.251 17.8245 5.031 17.0445 6.0015 17.0445H8.502C9.4725 17.0445 10.2525 17.8245 10.2525 18.795V24.045H14.502V3.64497C14.5005 2.78397 13.8795 2.05497 13.0305 1.91397ZM5.5005 14.7945H4.0005C3.5865 14.7945 3.2505 14.4585 3.2505 14.0445C3.2505 13.6305 3.5865 13.2945 4.0005 13.2945H5.5005C5.9145 13.2945 6.2505 13.6305 6.2505 14.0445C6.2505 14.4585 5.9145 14.7945 5.5005 14.7945ZM5.5005 11.7945H4.0005C3.5865 11.7945 3.2505 11.4585 3.2505 11.0445C3.2505 10.6305 3.5865 10.2945 4.0005 10.2945H5.5005C5.9145 10.2945 6.2505 10.6305 6.2505 11.0445C6.2505 11.4585 5.9145 11.7945 5.5005 11.7945ZM5.5005 8.79447H4.0005C3.5865 8.79447 3.2505 8.45848 3.2505 8.04447C3.2505 7.63047 3.5865 7.29447 4.0005 7.29447H5.5005C5.9145 7.29447 6.2505 7.63047 6.2505 8.04447C6.2505 8.45848 5.9145 8.79447 5.5005 8.79447ZM5.5005 5.79447H4.0005C3.5865 5.79447 3.2505 5.45847 3.2505 5.04447C3.2505 4.63047 3.5865 4.29447 4.0005 4.29447H5.5005C5.9145 4.29447 6.2505 4.63047 6.2505 5.04447C6.2505 5.45847 5.9145 5.79447 5.5005 5.79447ZM10.5 14.7945H9C8.586 14.7945 8.25 14.4585 8.25 14.0445C8.25 13.6305 8.586 13.2945 9 13.2945H10.5C10.914 13.2945 11.25 13.6305 11.25 14.0445C11.25 14.4585 10.914 14.7945 10.5 14.7945ZM10.5 11.7945H9C8.586 11.7945 8.25 11.4585 8.25 11.0445C8.25 10.6305 8.586 10.2945 9 10.2945H10.5C10.914 10.2945 11.25 10.6305 11.25 11.0445C11.25 11.4585 10.914 11.7945 10.5 11.7945ZM10.5 8.79447H9C8.586 8.79447 8.25 8.45848 8.25 8.04447C8.25 7.63047 8.586 7.29447 9 7.29447H10.5C10.914 7.29447 11.25 7.63047 11.25 8.04447C11.25 8.45848 10.914 8.79447 10.5 8.79447ZM10.5 5.79447H9C8.586 5.79447 8.25 5.45847 8.25 5.04447C8.25 4.63047 8.586 4.29447 9 4.29447H10.5C10.914 4.29447 11.25 4.63047 11.25 5.04447C11.25 5.45847 10.914 5.79447 10.5 5.79447Z"
@@ -198,12 +192,12 @@
                   </svg>
                 </span>
               </span>
-              <h3>Business</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              <h3 class="choose-category-item__title">Business</h3>
+              <p class="choose-category-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </a>
 
             <a href="#" class="choose-category-item">
-              <span class="choose-category-item-icon">
+              <span class="choose-category-item__icon">
                 <span><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_533_2350)">
                       <path
@@ -239,11 +233,12 @@
                   </svg>
                 </span>
               </span>
-              <h3>Startup</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              <h3 class="choose-category-item__title">Startup</h3>
+              <p class="choose-category-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </a>
+
             <a href="#" class="choose-category-item">
-              <span class="choose-category-item-icon">
+              <span class="choose-category-item__icon">
                 <span><svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_533_2312)">
                       <path
@@ -267,11 +262,12 @@
                   </svg>
                 </span>
               </span>
-              <h3>Economy</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              <h3 class="choose-category-item__title">Economy</h3>
+              <p class="choose-category-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </a>
+
             <a href="#" class="choose-category-item">
-              <span class="choose-category-item-icon">
+              <span class="choose-category-item__icon">
                 <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_533_2339)">
                       <path
@@ -292,42 +288,45 @@
                   </svg>
                 </span>
               </span>
-              <h3>Technology</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              <h3 class="choose-category-item__title">Technology</h3>
+              <p class="choose-category-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </a>
-          </div>
+          </div> <!-- choose-category END -->
         </div>
-      </section> <!-- choose-category -->
+      </section> <!-- choose-category END -->
 
-      <section class="left-img-banner">
+      <section class="special-post">
         <div class="container">
-          <div class="left-img-banner-bg img-cover-center">
-            <img src="assets/images/left-img-banner.png" alt="#">
-          </div>
-          <div class="left-img-banner-info">
-            <p class="caption">Why we started </p>
-            <h2 class="h1">It started out as a simple idea and evolved into our passion</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-            </p>
-            <a href="#" class="btn btn--arrow">Discover our story</a>
+          <div class="special-post-flex">
+            <div class="special-post-bg">
+              <img src="assets/images/left-img-banner.png" alt="#">
+            </div>
+            <div class="special-post-content">
+              <p class="special-post-content__caption">Why we started </p>
+              <h2 class="special-post-content__title">It started out as a simple idea and evolved into our passion</h2>
+              <p class="special-post-content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+              </p>
+              <a href="#" class="special-post-content__btn">Discover our story</a>
+            </div>
           </div>
         </div>
       </section>
-      <!-- left-img-banner -->
+      <!-- special-post END -->
 
       <section class="list-authors">
         <div class="container">
-          <h2 class="section-title-center">List of Authors</h2>
+          <h2 class="list-authors__title">List of Authors</h2>
 
           <div class="list-authors-grid">
             <div class="list-authors-item">
-              <a href="#" class="list-authors-logo">
+              <a href="#" class="list-authors-item__logo">
                 <img src="assets/images/avatar-1.png" alt="#">
               </a>
-              <a href="#" class="list-authors-name">Floyd Miles</a>
-              <p class="list-authors-company"><a href="#">@Company</a></p>
-              <nav class="social-nav">
+              <a href="#" class="list-authors-item__name">Floyd Miles</a>
+              <p class="list-authors-item__company"><a href="#">@Company</a></p>
+              <nav class="list-authors-item__social-nav">
                 <ul>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
@@ -338,12 +337,12 @@
             </div>
 
             <div class="list-authors-item">
-              <a href="#" class="list-authors-logo">
+              <a href="#" class="list-authors-item__logo">
                 <img src="assets/images/avatar-2.png" alt="#">
               </a>
-              <a href="#" class="list-authors-name">Dianne Russell</a>
-              <p class="list-authors-company"><a href="#">@Company2</a></p>
-              <nav class="social-nav">
+              <a href="#" class="list-authors-item__name">Dianne Russell</a>
+              <p class="list-authors-item__company"><a href="#">@Company2</a></p>
+              <nav class="list-authors-item__social-nav">
                 <ul>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
@@ -354,10 +353,10 @@
             </div>
 
             <div class="list-authors-item">
-              <a href="#" class="list-authors-logo"></a>
-              <a href="#" class="list-authors-name">Jenny Wilson</a>
-              <p class="list-authors-company"><a href="#">@Company3</a></p>
-              <nav class="social-nav">
+              <a href="#" class="list-authors-item__logo"></a>
+              <a href="#" class="list-authors-item__name">Jenny Wilson</a>
+              <p class="list-authors-item__company"><a href="#">@Company3</a></p>
+              <nav class="list-authors-item__social-nav">
                 <ul>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
@@ -368,12 +367,12 @@
             </div>
 
             <div class="list-authors-item">
-              <a href="#" class="list-authors-logo">
+              <a href="#" class="list-authors-item__logo">
                 <img src="assets/images/avatar-4.png" alt="#">
               </a>
-              <a href="#" class="list-authors-name">Leslie Alexander</a>
-              <p class="list-authors-company"><a href="#">@Company4</a></p>
-              <nav class="social-nav">
+              <a href="#" class="list-authors-item__name">Leslie Alexander</a>
+              <p class="list-authors-item__company"><a href="#">@Company4</a></p>
+              <nav class="list-authors-item__social-nav">
                 <ul>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
@@ -382,51 +381,52 @@
                 </ul>
               </nav>
             </div>
-          </div><!-- list-authors-grid -->
-        </div>
-      </section><!-- list-authors -->
 
-      <section>
-        <div class="container">
-          <div class="join-our-team">
-            <h2>Join our team to be a part of our story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            <a href="#" class="btn">Join Now</a>
-          </div>
+          </div><!-- list-authors-grid END -->
         </div>
-      </section>
+      </section><!-- list-authors END-->
+
+      <section class="text-banner">
+        <div class="container">
+          <h2 class="text-banner__title">Join our team to be a part of our story</h2>
+          <p class="text-banner__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt.</p>
+          <a href="#" class="text-banner__btn btn">Join Now</a>
+        </div>
+      </section> <!-- text-banner END -->
     </main>
 
     <footer class="footer">
       <div class="container">
-        <div class="navbar">
-          <a href="index.html" class="navbar-logo">{FinSweet</a>
 
-          <nav class="navbar-nav">
-            <ul class="navbar-list">
-              <li class="navbar-list-item"><a href="index.html">Home</a></li>
-              <li class="navbar-list-item"><a href="">Blog</a></li>
-              <li class="navbar-list-item"><a href="">About Us</a></li>
-              <li class="navbar-list-item"><a href="">Contact us</a></li>
-              <li class="navbar-list-item"><a href="">Privacy Policy</a></li>
+        <div class="footer-navigation">
+          <a href="index.html" class="footer-navigation__logo">FinSweet</a>
+
+          <nav class="footer-navigation__navbar">
+            <ul class="footer-navigation__list">
+              <li><a class="footer-navigation__link" href="index.html"><span>Home</span></a></li>
+              <li><a class="footer-navigation__link" href="#"><span>Blog</span></a></li>
+              <li><a class="footer-navigation__link" href="#"><span>About Us</span></a></li>
+              <li><a class="footer-navigation__link" href="#"><span>Contact us</span></a></li>
+              <li><a class="footer-navigation__link" href="#"><span>Privacy Policy</span></a></li>
             </ul>
           </nav>
         </div>
 
-        <form class="form-subcribe">
-          <label class="form-subcribe-label" for="email">Subscribe to our news letter to get latest updates and
+        <form class="footer-form">
+          <label class="footer-form__label" for="email">Subscribe to our news letter to get latest updates and
             news</label>
-          <input class="form-subcribe-input" type="email" id="email" placeholder="Enter Your Email">
-          <button type="submit" class="btn">Subscribe</button>
+          <input class="footer-form__input" type="email" id="email" placeholder="Enter Your Email">
+          <button type="submit" class="footer-form__btn">Subscribe</button>
         </form>
 
         <div class="footer-bottom">
-          <div class="footer-copyright">
-            <p>Finstreet 118 2561 Fintown</p>
+          <div class="footer-bottom__copyright">
+            <p>FinSweet 118 2561 FinTown</p>
             <p>Hello@finsweet.com 020 7993 2905</p>
           </div>
 
-          <nav class="social-nav">
+          <nav class="footer-bottom__social-nav">
             <ul>
               <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
               <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>

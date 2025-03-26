@@ -1,0 +1,40 @@
+@use '../../variables' as *;
+@use '../../templates' as *;
+
+.footer-form {
+  display: flex;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4rem 5rem;
+  margin: 3.5rem 0 3rem;
+
+  &__label {
+    min-width: 0;
+    color: $color-white;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    flex: 0 1 auto;
+    letter-spacing: -0.125rem;
+  }
+
+  &__input {
+    margin-left: auto;
+    background-color: transparent;
+    border: 1px solid $color-dark-grey;
+    width: 20rem;
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    outline: none;
+    color: $color-white;
+    flex: 0 0 auto;
+    &:focus {
+      border: 1px solid #fff;
+    }
+  }
+
+  &__btn {
+    @extend %btn-primary;
+  }
+}

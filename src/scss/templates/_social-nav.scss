@@ -1,0 +1,30 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+%social-nav {
+  ul {
+    list-style: none;
+    gap: 1rem;
+    @include flex-center(0.5rem);
+    li a {
+      display: block;
+      color: $color-medium-grey;
+      font-size: 1rem;
+      line-height: 1rem;
+      padding: 0.5rem;
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
+%social-nav-black {
+  @extend %social-nav;
+  ul li a {
+    color: $color-black;
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+}

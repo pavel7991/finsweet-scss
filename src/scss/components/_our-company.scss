@@ -1,0 +1,36 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+.our-company {
+  &__two-lines {
+    @include two-lines(end, 66%, 22%);
+  }
+  &__grid {
+    padding: 6rem 5rem;
+    background-color: $color-lavender;
+    @include grid-columns(2, 2rem);
+  }
+
+  &-item {
+    &__caption {
+      @extend %text-caption;
+      margin-bottom: 1.5rem;
+    }
+    &__title {
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+    }
+    &__link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      line-height: 2rem;
+      color: $color-purple;
+      transition: color, 0.3s ease-out;
+      &:hover {
+        color: $color-dark-yellow;
+      }
+    }
+  }
+}

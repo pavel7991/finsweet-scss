@@ -1,0 +1,45 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+.choose-category {
+  &-grid {
+    @include auto-grid(250px, 2rem);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &-item {
+    padding: 2rem;
+    background-color: $color-white;
+    border: 1px solid $color-medium-grey;
+    transition: all, 0.3s ease-out;
+    &:hover {
+      background-color: $color-yellow;
+      border: 1px solid $color-yellow;
+    }
+
+    &__icon {
+      display: block;
+      background-color: $color-light-yellow;
+      margin-bottom: 1rem;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 0.625rem;
+      @include flex-center;
+    }
+
+    &__title {
+      margin-bottom: 0.25rem;
+    }
+    &__description {
+      color: $color-medium-grey;
+      transition: color 0.3s ease-out;
+    }
+    &:hover &__description {
+      color: $color-black;
+    }
+  }
+}

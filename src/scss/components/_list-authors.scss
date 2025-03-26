@@ -1,0 +1,96 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+.list-authors {
+  &__title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &-grid {
+    @include grid-columns(4, 2rem);
+  }
+
+  &-item {
+    padding: 2.5rem;
+    background-color: $color-light-grey;
+    text-align: center;
+    transition: background-color 0.3s ease-out;
+    &:hover {
+      background-color: $color-light-yellow;
+    }
+
+    &__logo {
+      display: block;
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: $color-white;
+      margin: 0 auto 1.25rem;
+      border: 1px solid transparent;
+      transition: all 0.3s ease-out;
+      &:hover {
+        border: 1px solid $color-yellow;
+      }
+      &:before {
+        content: '\f030';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-black;
+        font-size: 3rem;
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        min-height: 100%;
+        z-index: 2;
+      }
+    }
+
+    &__name {
+      text-align: center;
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+      letter-spacing: -0.063rem;
+      font-weight: 700;
+      color: $color-black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__company {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: $color-medium-grey;
+      margin-bottom: 1.25rem;
+
+      &:before {
+        content: 'Content Writer ';
+      }
+      a {
+        color: inherit;
+        &:hover {
+          color: $color-purple;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__social-nav {
+      @extend %social-nav-black;
+    }
+  }
+}

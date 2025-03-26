@@ -13,3 +13,6 @@ html {
   color: $color-black;
   @extend %text-base;
 }
+section {
+  margin-bottom: 8rem;
+}

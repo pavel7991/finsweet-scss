@@ -1,0 +1,42 @@
+@use '../variables' as *;
+@use '../templates' as *;
+@use '../mixins' as *;
+
+.special-post {
+  &-flex {
+    position: relative;
+    display: flex;
+  }
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      min-width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    background: $color-white;
+    padding: 6.25%;
+    margin-top: 9.4%;
+    width: 55%;
+    margin-left: auto;
+
+    &__caption {
+      @extend %text-caption;
+    }
+    &__title {
+      margin: 1.5rem 0 1rem;
+    }
+    &__btn {
+      margin-top: 2rem;
+      @extend %btn-secondary;
+    }
+  }
+}

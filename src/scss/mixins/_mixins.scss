@@ -17,6 +17,26 @@
   left: $left;
 }
 
+@mixin flex-center($flex-gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $flex-gap;
+}
+
+@mixin flex-between-center($flex-gap: 0) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $flex-gap;
+}
+
+@mixin grid-columns($columns: 4, $grid-gap: $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $grid-gap;
+}
+
 @mixin cropp-text($line: 3, $fs: 1rem, $lh: 1.75rem) {
   font-size: $fs;
   line-height: $lh;
