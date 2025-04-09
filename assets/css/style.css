@@ -513,8 +513,8 @@ h1 a:hover {
 
 .hero {
   position: relative;
-
   overflow: hidden;
+  margin-bottom: 8rem;
 }
 .hero::after {
   position: absolute;
